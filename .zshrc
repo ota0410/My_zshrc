@@ -150,3 +150,29 @@ bindkey '^[tab_rename' tab_rename
 # 後：option .
 bindkey '^[word-remove-right' kill-word
 bindkey '^[word-remove-left' backward-kill-word
+export PATH="$PATH:/home/xyz/anaconda3/condabin"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/xyz/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/xyz/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/xyz/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/xyz/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+#zsh_history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt append_history
+setopt share_history
+setopt hist_ignore_all_dups
+
+# <<< conda initialize <<<
+xmodmap -e 'keycode 135 = underscore'
