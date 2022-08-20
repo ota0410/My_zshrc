@@ -1,3 +1,4 @@
+# Created by newuser for 5.4.2
 PROMPT='
 %F{green}%(5~,%-1~/.../%2~,%~)%f
 %F{green}%B> %f'
@@ -173,6 +174,8 @@ SAVEHIST=10000
 setopt append_history
 setopt share_history
 setopt hist_ignore_all_dups
-
-# <<< conda initialize <<<
-xmodmap -e 'keycode 135 = underscore'
+export DISPLAY=:0.0
+#if [ "`ps -eo pid,cmd | grep systemd | grep -v grep | sort -n -k 1 | awk 'NR==1 { print $1 }'`" != "1" ]; then
+#  genie -s
+#fi
+source /usr/local/bin/aws_zsh_completer.sh
