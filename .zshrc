@@ -1,7 +1,7 @@
 # Created by newuser for 5.4.2
 PROMPT='
-%F{green}%(5~,%-1~/.../%2~,%~)%f
-%F{green}%B> %f'
+%F{cyan}[%n@%m](%*%)%F{white}: %(5~,%-1~/.../%2~,%~)%f
+%F{white}%B> %f'
 
 # --------------------------------------------------
 #  git branch状態を表示（右）
@@ -18,7 +18,7 @@ zstyle ':vcs_info:*' unstagedstr "%F{red}%B＋%b%f"
 # commitしてない場合の表示
 zstyle ':vcs_info:*' stagedstr "%F{yellow}★ %f"
 # デフォルトの状態の表示
-zstyle ':vcs_info:*' formats "%u%c%F{green}【 %b 】%f"
+zstyle ':vcs_info:*' formats "%u%c%F{cyan}【 %b 】%f"
 # コンフリクトが起きたり特別な状態になるとformatsの代わりに表示
 zstyle ':vcs_info:*' actionformats '【%b | %a】'
 
