@@ -179,3 +179,4 @@ export DISPLAY=:0.0
 #  genie -s
 #fi
 source /usr/local/bin/aws_zsh_completer.sh
+source /etc/zsh_command_not_found
